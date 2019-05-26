@@ -1,3 +1,4 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
    <head>
    <title>Credit Bank | home</title>
@@ -17,9 +18,13 @@
    	  <p class="lead">Please register to initate the credit card application.</p>
    	  </div>
    	  <div class="col-sm-4">
+   	  <a href="<spring:url value="/user_register" />">
    	  <button type="button" class="btn btn-primary">register new application</button>
+   	  </a>
    	  <br><br>
+   	  <a href="<spring:url value="/dashboard" />">
    	  <button type="button" class="btn btn-primary">view applications</button>
+      </a>
       </div>
       </div>
       </div>
