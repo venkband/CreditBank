@@ -13,6 +13,7 @@ public class UserService {
 
     public void addUserApplication(User u)
     {
-        repository.save(u);
+        System.out.println("Was asked to add user application");
+        //repository.save(u);
     }
 }
