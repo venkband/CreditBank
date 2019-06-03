@@ -5,6 +5,9 @@ import com.bandaru.ven.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -13,7 +16,13 @@ public class UserService {
 
     public void addUserApplication(User u)
     {
-        System.out.println("Was asked to add user application");
-        //repository.save(u);
+        repository.save(u);
+    }
+
+    public List<User> getAllUsers()
+    {
+        List<User> users = new ArrayList<User>();
+        repository.findAll().forEach(users::add);
+        return users;
     }
 }
